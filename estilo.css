@@ -1,0 +1,21 @@
+/* Variáveis de estilo para padronização */
+:root {
+    --tamanho-fonte-texto-padrao: 14px;
+    --fonte-family-padrao: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --fonte-color-padrao: rgb(51, 51, 51);
+    --fonte-weight-padrao: 500;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+    font-size: var(--tamanho-fonte-texto-padrao);
+    font-family: var(--fonte-family-padrao);
+    color: var(--fonte-color-padrao);
+    font-weight: var(--fonte-weight-padrao);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, label, button {
+    margin: 0;
+    padding: 0;
+}
