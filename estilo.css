@@ -1,21 +1,278 @@
 /* Variáveis de estilo para padronização */
 :root {
-    --tamanho-fonte-texto-padrao: 14px;
-    --fonte-family-padrao: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --fonte-color-padrao: rgb(51, 51, 51);
-    --fonte-weight-padrao: 500;
+  --tamanho-fonte-texto-padrao: 14px;
+  --fonte-family-padrao: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fonte-color-padrao: rgb(51, 51, 51);
+  --background-color-padrao: rgb(255, 255, 255);
+  --contraste-color-padrao: rgb(235, 235, 235);
+  --border-color-padrao: rgb(197, 193, 193);
+  --pendente-color-button: rgb(247, 155, 11);
+  --executando-color-button: rgb(22, 109, 225);
+  --concluido-color-button: rgb(96, 184, 92);
+  --border-radius-padrao: 4px;
+  --fonte-weight-padrao: 500;
 }
 
 body {
-    height: 100vh;
-    position: relative;
-    font-size: var(--tamanho-fonte-texto-padrao);
-    font-family: var(--fonte-family-padrao);
-    color: var(--fonte-color-padrao);
-    font-weight: var(--fonte-weight-padrao);
+  height: 100vh;
+  position: relative;
+  font-size: var(--tamanho-fonte-texto-padrao);
+  font-family: var(--fonte-family-padrao);
+  color: var(--fonte-color-padrao);
+  font-weight: var(--fonte-weight-padrao);
 }
 
-body, h1, h2, h3, h4, h5, h6, p, label, button {
-    margin: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.71em 1.42em;
+  border-bottom: 1px solid var(--border-color-padrao);
+}
+
+.menu-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  margin-right: 1em;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.fa-bars {
+  background-color: white;
+}
+
+.header-list {
+  list-style: none;
+}
+
+.header-list-item {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.main-container {
+  display: flex;
+}
+
+.tarefas-container {
+  width: 30%;
+  min-width: 300px;
+
+  border-right: 1px solid var(--border-color-padrao);
+}
+
+.tarefas-header {
+  display: flex;
+
+  padding: 1.07em 1.42em 6em 1.42em;
+  border-bottom: 1px solid var(--border-color-padrao);
+}
+
+.tarefas-title {
+  font-size: 1.57rem;
+  font-weight: 600;
+
+  margin-right: 5px;
+}
+
+.button {
+  font-size: 1rem;
+  padding: 0.28em 0.42em;
+
+  border-radius: var(--border-radius-padrao);
+  border-color: var(--border-color-padrao);
+  border: 1px solid var(--border-color-padrao);
+  outline: none;
+  cursor: pointer;
+}
+
+.tarefas-list-container {
+  overflow-y: scroll;
+}
+
+.tarefas-list {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0.71em 1.42em;
+  border-bottom: 1px solid var(--border-color-padrao);
+}
+
+.tarefa-div {
+  flex-direction: column;
+}
+
+.tarefa-div-p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tarefa-div-span {
+  font-weight: 500;
+}
+
+.tarefas-situacao {
+  font-size: 1rem;
+  color: white;
+
+  outline: none;
+  border: none;
+  border-radius: var(--border-radius-padrao);
+  cursor: pointer;
+}
+
+.pendente-button {
+  background-color: var(--pendente-color-button);
+}
+
+.executando-button {
+  background-color: var(--executando-color-button);
+}
+
+.concluido-button {
+  background-color: var(--concluido-color-button);
+}
+
+.cadastro-container {
+  width: 70%;
+}
+
+.nova-tarefa-header {
+  padding: 1.07em 0.9em 6em 0.9em;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nova-tarefa {
+  font-size: 1.57rem;
+  font-weight: 600;
+}
+
+.cancelar-button {
+  margin-right: 5px;
+}
+
+.dados-gerais-container {
+  display: flex;
+  justify-content: center;
+}
+
+.dados-gerais {
+  width: 97%;
+}
+
+.dados-gerais-header {
+  font-size: 1.57rem;
+  font-weight: 600;
+  background-color: var(--contraste-color-padrao);
+
+  padding: 0.45em 0.9em;
+
+  border-radius: var(--border-radius-padrao) var(--border-radius-padrao) 0 0;
+  border-top: 1px solid var(--border-color-padrao);
+  border-left: 1px solid var(--border-color-padrao);
+  border-right: 1px solid var(--border-color-padrao);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1em;
+
+  border-radius: 0 0 var(--border-radius-padrao) var(--border-radius-padrao);
+  border-left: 1px solid var(--border-color-padrao);
+  border-right: 1px solid var(--border-color-padrao);
+  border-bottom: 1px solid var(--border-color-padrao);
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.nome,
+.responsavel {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 20%;
+  padding: 0.4em;
+  border-radius: var(--border-radius-padrao);
+  border: 1.5px solid var(--border-color-padrao);
+
+  font-size: 12px;
+}
+
+.form-label {
+  font-size: 1rem;
+  font-weight: 600;
+
+  margin-bottom: 5px;
+}
+
+.menu {
+    width: 22%;
+    min-width: 350px;
+    position: absolute;
+    background-color: white;
+    height: 100%;
+
+    left: 0;
+
+    border-right: 1px solid var(--border-color-padrao);
+
+    display: none;
+}
+
+.header-menu-open {
+    border-bottom: 1px solid var(--border-color-padrao);
+    padding: 0.71em 1.42em;
+}
+
+.title-menu-open {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.header-list{
     padding: 0;
+}
+
+.menu.menu-open {
+  display: block;
 }

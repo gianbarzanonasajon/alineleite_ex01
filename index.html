@@ -1,18 +1,306 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Execício de Layout de Tela</title>
     <!-- Estilo da tela -->
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css" />
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <!-- Javascript externo -->
-    <script type="text/javascript" src="funcoes.js"></script>
-</head>
-<body onload="onLoad()">
-    <h1>oi</h1>
-</body>
+    <script type="text/javascript" src="funcoes.js" defer ></script>
+  </head>
+  <body onload="onLoad()">
+    <div class="menu">
+      <div class="header-menu-open">
+        <div class="title-menu-open">
+          <button class="menu-button" onclick="onMenuClick()">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+          <p class="header-title">Gestão de Projetos</p>
+        </div>
+        <div class="header-list-menu-open">
+          <ul class="header-list">
+            <li class="header-list-item">${usuario_nome}</li>
+            <li class="header-list-item">${usuario_nome@nasajon.com.br}</li>
+          </ul>
+        </div>
+      </div>
+      <div></div>
+    </div>
+    <div class="container">
+    <header>
+      <div class="header-left">
+        <button class="menu-button" onclick="onMenuClick()">
+          <i class="fas fa-bars fa-2x"></i>
+        </button>
+        <p class="header-title">Gestão de Projetos</p>
+      </div>
+      <div class="header-right">
+        <ul class="header-list">
+          <li class="header-list-item">${usuario_nome}</li>
+          <li class="header-list-item">${usuario_nome@nasajon.com.br}</li>
+        </ul>
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="tarefas-container">
+        <div class="tarefas-header">
+          <p class="tarefas-title">Tarefas</p>
+          <button type="button" class="button novo-button">
+            <i class="fas fa-plus"></i>
+            Novo
+          </button>
+        </div>
+        <div class="tarefas-list-container">
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 001</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Não</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Gian Barzano</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao pendente-button">
+                Pendente
+              </button>
+            </div>
+          </div>
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 002</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Não</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Gian Barzano</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao executando-button">
+                Executando
+              </button>
+            </div>
+          </div>
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 003</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Não</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Fábio Domingos</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao concluido-button">
+                Concluído
+              </button>
+            </div>
+          </div>
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 004</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Não</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Gian Barzano</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao concluido-button">
+                Concluído
+              </button>
+            </div>
+          </div>
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 005</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Não</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Fábio domingos</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao executando-button">
+                Executando
+              </button>
+            </div>
+          </div>
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 006</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Sim</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Fábio Domingos</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao pendente-button">
+                Pendente
+              </button>
+            </div>
+          </div>
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 007</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Não</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Gian Barzano</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao executando-button">
+                Executando
+              </button>
+            </div>
+          </div>
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 008</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Não</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Gian Barzano</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao concluido-button">
+                Concluído
+              </button>
+            </div>
+          </div>
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 009</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Sim</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Fábio Domingos</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao concluido-button">
+                Concluído
+              </button>
+            </div>
+          </div>
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 010</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Sim</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Gian Barzano</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao executando-button">
+                Executando
+              </button>
+            </div>
+          </div>
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 011</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Não</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Gian Barzano</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao concluido-button">
+                Concluído
+              </button>
+            </div>
+          </div>
+          <div class="tarefas-list">
+            <div class="tarefa-div">
+              <p class="tarefa-div-p">Tarefa 012</p>
+              <p class="tarefa-div-p">
+                Extra sprint: <span class="tarefa-div-span">Não</span>
+              </p>
+              <p class="tarefa-div-p">
+                Responsável: <span class="tarefa-div-span">Gian Barzano</span>
+              </p>
+            </div>
+            <div>
+              <button class="button tarefas-situacao pendente-button">
+                Pendente
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cadastro-container">
+        <div class="nova-tarefa-header">
+          <div class="nova-tarefa">Nova Tarefa</div>
+          <div>
+            <button type="button" class="button cancelar-button">
+              <i class="fas fa-times"></i>
+              Cancelar
+            </button>
+            <button type="submit" class="button salvar-button">
+              <i class="fas fa-check"></i>
+              Salvar
+            </button>
+          </div>
+        </div>
+        <div class="dados-gerais-container">
+          <div class="dados-gerais">
+            <div class="dados-gerais-header">Dados Gerais</div>
+            <div class="form-container">
+              <div class="form-inputs nome">
+                <label for="nome" class="form-label">Nome</label>
+                <input id="nome" type="text" name="nome" class="form-input" />
+              </div>
+              <div class="form-inputs responsavel">
+                <label for="responsavel" class="form-label">Responsável</label>
+                <input
+                  id="responsavel"
+                  type="text"
+                  name="responsavel"
+                  class="form-input"
+                />
+              </div>
+              <div class="form-inputs extra-sprint">
+                <label for="extra-sprint" class="form-label"
+                  >Extra-sprint</label
+                >
+                <input
+                  id="extra-sprint"
+                  type="checkbox"
+                  name="extra-sprint"
+                  class="form-input-check"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
 </html>
